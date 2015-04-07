@@ -20,6 +20,6 @@ group :development, :test do
 
   gem 'spring'
 
-  gem 'pg'
+  gem 'sqlite3'
 
 end
