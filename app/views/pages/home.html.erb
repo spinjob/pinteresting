@@ -1,9 +1,19 @@
 
 <div class="jumbotron center">
-	<div class="container">
-            <div class="col-md-6 col-md-offset-3">
-               <h1>Let's Game.</h1>
-		<p>Click here to <%= link_to "Sign in through Facebook", "#", class: "btn btn-facebook btn-lg" %></p>
-        </div>
+    <h1>Let's Game.</h1>
+		
+<% if user_signed_in? %>
+	
+	# do something
+
+	<% else %>
+		
+		<p>
+			<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+		</p>
+
+	<% end %>
+
 	</div>
 
