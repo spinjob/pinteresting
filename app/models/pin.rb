@@ -6,4 +6,8 @@ class Pin < ActiveRecord::Base
 #Paperclip 4 requires you to validate the post type
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
+validates :description, presence: true
+
+validates :image, presence: true
+
 end
